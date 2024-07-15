@@ -10,7 +10,11 @@ nvim -> .config/nvim/
 
 ## oh-my-posh
 
-omp => .config/omp-themes/
+omp -> .config/omp-themes/
+
+## timetrap
+
+timetrap -> .timetrap.db, .timetrap.yaml
 
 ## zsh
 
