@@ -1,0 +1,5 @@
+inherits = 'autumn_night'
+
+"ui.background" = { fg = "foreground" }
+"ui.gutter" = { fg = "foreground" }
+"ui.linenr" = { fg = "foreground" }

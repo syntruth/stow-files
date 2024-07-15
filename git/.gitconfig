@@ -1,0 +1,34 @@
+# This is Git's per-user configuration file.
+[user]
+  # Please adapt and uncomment the following lines:
+  name = Randy Carnahan
+  email = randy.carnahan@charter.com
+
+[commit]
+  verbose = true
+  date = now
+
+[pager]
+	diff = diff-so-fancy | less --tabs=4 -RFX
+	show = diff-so-fancy | less --tabs=4 -RFX
+
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+
+[core]
+	editor = nvim
+
+[alias]
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  ign = ls-files -o -i --exclude-standard
+  standup = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --since=yesterday
+  statusupdate = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --since='last week'
+  delete-merged-branches = "!f() { git checkout --quiet main && git branch --merged | grep --invert-match \\* | xargs -n 1 git branch --delete; }; f"
+  out="!git-fire"
+	tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
+
+[init]
+	defaultBranch = main
