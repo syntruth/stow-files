@@ -1,5 +1,9 @@
 # Stowed Files
 
+## btop
+
+btop -> .config/btop/btop.conf
+
 ## git
 
 git -> .gitconfig
