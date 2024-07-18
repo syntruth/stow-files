@@ -1,0 +1,71 @@
+AllCops:
+  TargetRubyVersion: 2.7.1
+
+Layout/HashAlignment:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+
+Layout/LineLength:
+  Max: 80
+
+Lint/SafeNavigationChain:
+  Description: 'Do not chain ordinary method call after safe navigation operator.'
+  Enabled: false
+
+Style/AccessorGrouping:
+  Enabled: false
+
+Style/SafeNavigation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+Style/OptionalBooleanParameter:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 25
+
+Metrics/BlockLength:
+  CountComments: false  # count full line comments?
+  Max: 25
+  IgnoredMethods:
+    # By default, exclude the `#refine` method, as it tends to have larger
+    # associated blocks.
+    # Also add Roda#hash_branch Roda#route and namespace from Rake tasks
+    - hash_branch
+    - namespace
+    - refine
+    - route
+
+Metrics/ClassLength:
+  CountComments: false
+  Max: 150
+
+Metrics/MethodLength:
+  Max: 15
+
+Naming/RescuedExceptionsVariableName:
+  PreferredName: err
+
+Naming/VariableNumber:
+  Enabled: false
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true

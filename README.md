@@ -12,6 +12,10 @@ nvim -> .config/nvim/
 
 omp -> .config/omp-themes/
 
+## Rubocop
+
+rubocop -> .rubocop.yml
+
 ## timetrap
 
 timetrap -> .timetrap.db, .timetrap.yaml
