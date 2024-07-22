@@ -16,6 +16,10 @@ nvim -> .config/nvim/
 
 omp -> .config/omp-themes/
 
+## oh-my-zsh
+
+oh-my-zsh -> .oh-my-zsh
+
 ## Rubocop
 
 rubocop -> .rubocop.yml
