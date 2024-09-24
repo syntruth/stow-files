@@ -27,6 +27,9 @@ Style/FormatStringToken:
 Style/OptionalBooleanParameter:
   Enabled: false
 
+Style/SelectByRegexp:
+  Enabled: false
+
 Metrics/AbcSize:
   Max: 25
 
@@ -271,8 +274,6 @@ Style/RedundantSelfAssignmentBranch: # new in 1.19
 Style/RedundantStringEscape: # new in 1.37
   Enabled: true
 Style/ReturnNilInPredicateMethodDefinition: # new in 1.53
-  Enabled: true
-Style/SelectByRegexp: # new in 1.22
   Enabled: true
 Style/SingleLineDoEndBlock: # new in 1.57
   Enabled: true

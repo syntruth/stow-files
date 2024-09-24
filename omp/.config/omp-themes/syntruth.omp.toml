@@ -20,15 +20,6 @@ console_title_template = '{{ .Folder }}'
   newline   = true
 
   [[blocks.segments]]
-    type       = 'time'
-    style      = 'diamond'
-    foreground = 'p:lightblue'
-    template   = '{{ .CurrentDate | date .Format }} '
-
-    [blocks.segments.properties]
-      time_format = 'Mon 15:04'
-
-  [[blocks.segments]]
     type             = 'path'
     style            = 'plain'
     foreground       = 'p:orange'
@@ -36,7 +27,7 @@ console_title_template = '{{ .Folder }}'
 
     [blocks.segments.properties]
       folder_separator_icon = ' 󰁕 '
-      home_icon             = ''
+      home_icon             = ' Home'
       style                 = 'full'
 
   [[blocks.segments]]

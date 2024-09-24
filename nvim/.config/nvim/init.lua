@@ -524,6 +524,9 @@ cmp.setup {
   },
 }
 
+-- Set our color columns
+vim.opt.colorcolumn = "72"
+
 vim.cmd 'colorscheme railscasts'
 
 -- The line beneath this is called `modeline`. See `:help modeline`

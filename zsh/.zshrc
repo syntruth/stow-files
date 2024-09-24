@@ -65,7 +65,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(colorize rbenv)
+# plugins=(colorize rbenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,7 +89,7 @@ export ELIXIR_ERL_OPTIONS="-kernel shell_history enabled"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # For some reason, compinit is not being called, so we do so manually.
-compinit
+# compinit
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -97,3 +97,16 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config ~/.config/omp-themes/syntruth.omp.toml)"
 fi
 
+alias ls='eza --group-directories-first --icons'
+alias ll='eza -l -a --group-directories-first -h --git --icons'
+alias rake='bundle exec rake'
+alias rux='bundle exec ripl -r ripl/rack'
+
+# Mongodb Admin
+alias mongoa="mongo -u admin -p --authenticationDatabase=admin"
+
+# Override vim for nvim
+alias vim='nvim'
+
+# Init rbenv
+eval "$(rbenv init - zsh)"
