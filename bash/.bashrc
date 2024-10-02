@@ -80,14 +80,11 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
 # Load My Aliases
 test -e "${HOME}/.aliases" && source "${HOME}/.aliases"
 
 # Ruby/Ripl aliases
-alias prux='RACK_ENV=production cli'
+alias pcli='test -f ./bin/cli && RACK_ENV=production ./bin/cli || echo "No cli found."'
 alias rake='RACK_ENV=production bundle exec rake'
 alias deploy='RACK_ENV=production bundle exec rake production:deploy'
 
