@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/Users/rcarnahan/.zsh/completions:"* ]]; then export FPATH="/Users/rcarnahan/.zsh/completions:$FPATH"; fi
 # Set up colors
 export TERM="xterm-256color"
 
@@ -101,3 +103,4 @@ test -e "${HOME}/.aliases" && source "${HOME}/.aliases"
 
 # Init rbenv
 eval "$(rbenv init - zsh)"
+. "/Users/rcarnahan/.deno/env"
