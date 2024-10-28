@@ -119,6 +119,9 @@ require('lazy').setup({
     },
   },
 
+  -- Mini Align
+  { 'echasnovski/mini.align', version = false },
+
   -- Set lualine as statusline
   {
     'nvim-lualine/lualine.nvim',
@@ -127,7 +130,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled        = false,
-        theme                = 'railscast',
+        theme                = 'auto',
         component_separators = '|',
         section_separators   = '',
       },
@@ -159,10 +162,11 @@ require('lazy').setup({
       -- Fuzzy Finder Algorithm which requires local dependencies to be
       -- built. Only load if `make` is available. Make sure you have the
       -- system requirements installed.
+      --
+      -- NOTE: If you are having trouble with this installation, refer
+      -- to the README for telescope-fzf-native for more instructions.
       {
         'nvim-telescope/telescope-fzf-native.nvim',
-        -- NOTE: If you are having trouble with this installation, refer
-        -- to the README for telescope-fzf-native for more instructions.
         build = 'make',
 
         cond = function()
@@ -686,6 +690,9 @@ cmp.setup {
   }
 }
 
+-- Set up Mini Align
+require('mini.align').setup()
+
 -- Always split to the right or below the current buffer.
 vim.opt.splitright = true
 vim.opt.splitbelow = true
@@ -702,6 +709,12 @@ vim.cmd [[
   highlight Normal ctermbg=none
   highlight NonText ctermbg=none
 ]]
+
+-- Set the default 2 spaces instead of tabs
+vim.opt.expandtab  = true
+vim.opt.tabstop    = 2
+vim.opt.shiftwidth = 2
+vim.bo.softtabstop = 2
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

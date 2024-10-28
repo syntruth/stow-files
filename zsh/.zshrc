@@ -1,10 +1,11 @@
 # Add deno completions to search path
 if [[ ":$FPATH:" != *":/Users/rcarnahan/.zsh/completions:"* ]]; then export FPATH="/Users/rcarnahan/.zsh/completions:$FPATH"; fi
+
 # Set up colors
 export TERM="xterm-256color"
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/bin/mongodb:$HOME/.cargo/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/opt/homebrew/opt/mongodb-community@4.4/bin:$PATH:$HOME/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/rcarnahan/.oh-my-zsh"
@@ -76,7 +77,7 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='nvim'
 
 # Compilation flags
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@3)"
 
 # Elixir/iex History settings
 export ELIXIR_ERL_OPTIONS="-kernel shell_history enabled"
@@ -103,4 +104,4 @@ test -e "${HOME}/.aliases" && source "${HOME}/.aliases"
 
 # Init rbenv
 eval "$(rbenv init - zsh)"
-. "/Users/rcarnahan/.deno/env"
+
