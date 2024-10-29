@@ -716,5 +716,9 @@ vim.opt.tabstop    = 2
 vim.opt.shiftwidth = 2
 vim.bo.softtabstop = 2
 
+-- Use <space>y to copy lines to the MacOS clipboard.
+vim.keymap.set({'v'}, '<C-c>', '"+y')
+vim.keymap.set({'v'}, '<C-x>', '"+d')
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
