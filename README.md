@@ -28,6 +28,10 @@ rubocop -> .rubocop.yml
 
 timetrap -> .timetrap.db, .timetrap.yaml
 
+## wezterm
+
+wezterm -> .config/wezterm/wezterm.lua
+
 ## zsh
 
 zsh -> .zshrc
