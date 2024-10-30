@@ -4,12 +4,18 @@ local config  = {}
 
 config.automatically_reload_config = true
 
+-- Assure that wezterm has the full $PATH.
+config.set_environment_variables = {
+  PATH = '/opt/homebrew/bin:' .. os.getenv('PATH'),
+}
+
 --
 -- General UI Settings
 --
 
 config.mouse_wheel_scrolls_tabs       = false
 config.show_new_tab_button_in_tab_bar = false
+config.hide_tab_bar_if_only_one_tab   = true
 
 --
 -- Command Palette Settings
@@ -31,8 +37,13 @@ config.font_size = 14.5
 config.window_background_opacity    = 0.8
 config.macos_window_background_blur = 15
 
--- config.color_scheme = 'Railscasts (dark) (terminal.sexy)'
-config.color_scheme = 'Colors (base16)'
+config.color_scheme = 'Railscasts (dark) (terminal.sexy)'
+-- config.color_scheme = 'Colors (base16)'
+-- config.color_scheme = 'zenbones_dark'
+-- config.color_scheme = 'X::DotShare (terminal.sexy)'
+-- config.color_scheme = 'Vacuous 2 (terminal.sexy)'
+-- config.color_scheme = 'Vibrant Ink (Gogh)'
+-- config.color_scheme = 'Ubuntu'
 
 -- Override Color Scheme Colors
 config.colors = {
@@ -96,6 +107,16 @@ config.keys = {
         end
       end)
     }
+  },
+
+  -- Open a Wezterm Config Tab
+  {
+    key    = ',',
+    mods   = 'SUPER',
+    action = act.SpawnCommandInNewTab {
+      -- Make sure that nvim is in your $PATH!
+      args = { 'nvim', wezterm.config_file }
+    },
   }
 }
 

@@ -5,7 +5,7 @@ if [[ ":$FPATH:" != *":/Users/rcarnahan/.zsh/completions:"* ]]; then export FPAT
 export TERM="xterm-256color"
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:/opt/homebrew/opt/mongodb-community@4.4/bin:$PATH:$HOME/.cargo/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/opt/mongodb-community@4.4/bin:$HOME/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/rcarnahan/.oh-my-zsh"
