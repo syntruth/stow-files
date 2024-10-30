@@ -17,6 +17,18 @@ config.mouse_wheel_scrolls_tabs       = false
 config.show_new_tab_button_in_tab_bar = false
 config.hide_tab_bar_if_only_one_tab   = true
 
+config.window_frame = {
+  border_left_width    = '0.1cell',
+  border_right_width   = '0.1cell',
+  border_bottom_height = '0.1cell',
+  border_left_color    = '#ffffff',
+  border_right_color   = '#ffffff',
+  border_bottom_color  = '#ffffff',
+
+  font      = wezterm.font('Hack Nerd Font Mono'),
+  font_size = 14
+}
+
 --
 -- Command Palette Settings
 --
