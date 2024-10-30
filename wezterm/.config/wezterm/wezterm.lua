@@ -49,7 +49,12 @@ config.font_size = 14.5
 config.window_background_opacity    = 0.8
 config.macos_window_background_blur = 15
 
-config.color_scheme = 'Railscasts (dark) (terminal.sexy)'
+config.color_scheme = 'Nucolors (terminal.sexy)'
+-- config.color_scheme = 'Orangish (terminal.sexy)'
+-- config.color_scheme = 'Pop (base16)'
+-- config.color_scheme = 'One Half Black (Gogh)'
+-- config.color_scheme = 'Railscasts (dark) (terminal.sexy)'
+-- config.color_scheme = 'Pastel White (terminal.sexy)'
 -- config.color_scheme = 'Colors (base16)'
 -- config.color_scheme = 'zenbones_dark'
 -- config.color_scheme = 'X::DotShare (terminal.sexy)'
