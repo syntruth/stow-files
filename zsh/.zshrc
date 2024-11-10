@@ -8,7 +8,7 @@ export TERM="xterm-256color"
 export PATH=$HOME/bin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/opt/mongodb-community@4.4/bin:$HOME/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/rcarnahan/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -92,7 +92,7 @@ export ELIXIR_ERL_OPTIONS="-kernel shell_history enabled"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # For some reason, compinit is not being called, so we do so manually.
-compinit
+# compinit
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
