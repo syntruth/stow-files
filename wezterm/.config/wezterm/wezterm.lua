@@ -82,18 +82,32 @@ config.colors = {
 
 -- Set up Keybinds
 config.keys = {
-  -- Move to the Last, to the Left, Tab
+  -- Change to the Previous Tab
   {
     key    = 'LeftArrow',
     mods   = 'SUPER',
     action = act.ActivateTabRelative(-1)
   },
 
-  -- Move to the Next, to the Right, Tab
+  -- Change to the Next Tab
   {
     key    = 'RightArrow',
     mods   = 'SUPER',
     action = act.ActivateTabRelative(1)
+  },
+
+  -- Move Tab to the Left
+  {
+    key    = 'LeftArrow',
+    mods   = 'SHIFT|SUPER',
+    action = act.MoveTabRelative(-1)
+  },
+
+  -- Move Tab to the Right
+  {
+    key    = 'RightArrow',
+    mods   = 'SHIFT|SUPER',
+    action = act.MoveTabRelative(1)
   },
 
   -- Close Tab without confirmation
