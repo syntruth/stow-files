@@ -21,9 +21,9 @@ config.window_frame = {
   border_left_width    = '0.1cell',
   border_right_width   = '0.1cell',
   border_bottom_height = '0.1cell',
-  border_left_color    = '#ffffff',
-  border_right_color   = '#ffffff',
-  border_bottom_color  = '#ffffff',
+  border_left_color    = 'black',
+  border_right_color   = 'black',
+  border_bottom_color  = 'black',
 
   font      = wezterm.font('Hack Nerd Font Mono'),
   font_size = 14
@@ -49,7 +49,13 @@ config.font_size = 14.5
 config.window_background_opacity    = 0.8
 config.macos_window_background_blur = 15
 
-config.color_scheme = 'Nucolors (terminal.sexy)'
+config.color_scheme = 'kanagawabones'
+-- config.color_scheme = 'Londontube (dark) (terminal.sexy)'
+-- config.color_scheme = 'midnight-in-mojave'
+-- config.color_scheme = 'MonaLisa'
+-- config.color_scheme = 'Nucolors (terminal.sexy)'
+-- config.color_scheme = 'Mathias'
+-- config.color_scheme = 'MaterialDesignColors'
 -- config.color_scheme = 'Orangish (terminal.sexy)'
 -- config.color_scheme = 'Pop (base16)'
 -- config.color_scheme = 'One Half Black (Gogh)'
