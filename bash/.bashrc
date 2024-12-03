@@ -93,7 +93,7 @@ alias passenger-status='sudo `which passenger-status`'
 alias passenger-memory-stats='sudo `which passenger-memory-stats`'
 
 # Sidekiq Memory Stats & Web
-alias skmem='ps auxx | grep sidekiq | awk '\''{$5=int($5/1024)"M";}{ print;}'\'' | awk '\''{$6=int($6/1024)"M";}{ print;}'\'''
+alias skmem='ps auxx | grep -E "sidekiq .*-production" | grep -v grep | awk '\''{$5=int($5/1024)"M";}{ print;}'\'' | awk '\''{$6=int($6/1024)"M";}{ print;}'\'''
 alias skweb='bundle exec rackup -o 0.0.0.0 -p 9494 sidekiq.ru'
 
 # Error logs alias
