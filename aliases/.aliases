@@ -5,5 +5,6 @@ alias rake='bundle exec rake'
 alias cli='test -f ./bin/cli && ./bin/cli || echo "No cli found."'
 alias console='test -f ./bin/console && ./bin/console || echo "No console found."'
 
-alias mongoa="mongo -u admin -p --authenticationDatabase=admin"
+alias mongoa="mongosh -u admin -p --authenticationDatabase=admin"
+alias mongoa="mongosh -u admin -p --authenticationDatabase=admin --eval 'rs.status()'"
 alias vim='nvim'

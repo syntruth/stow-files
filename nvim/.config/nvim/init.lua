@@ -2,9 +2,6 @@ require('config.options')
 require('config.keybinds')
 require('config.lazy')
 
--- Set up Mini Align
--- require('mini.align').setup()
-
 -- Always split to the right or below the current buffer.
 vim.opt.splitright  = true
 vim.opt.splitbelow  = true
