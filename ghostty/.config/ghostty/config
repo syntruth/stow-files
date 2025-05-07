@@ -2,8 +2,8 @@ theme                  = kanagawabones
 background             = #000000
 foreground             = #ffffff
 font-size              = 14.5
-background-opacity     = 0.8
-background-blur-radius = 15
+background-opacity     = 0.75
+background-blur-radius = 12
 
 mouse-hide-while-typing = true
 

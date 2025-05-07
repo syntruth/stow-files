@@ -1,60 +1,60 @@
 console_title_template = '{{ .Folder }}'
-version = 3
+version                = 3
 
 [palette]
-  blue = '#2c699a'
-  green = '#16db93'
+  blue      = '#2c699a'
+  green     = '#16db93'
   lightblue = '#048ba8'
-  orange = '#f29e4c'
-  purple = '#54478c'
-  red = '#e94a47'
-  white = '#ffffff'
-  yellow = '#efea5a'
+  orange    = '#f29e4c'
+  purple    = '#54478c'
+  red       = '#e94a47'
+  white     = '#ffffff'
+  yellow    = '#efea5a'
 
 [transient_prompt]
-  template = '> '
+  template   = '> '
   foreground = 'p:purple'
   background = 'transparent'
 
 [[blocks]]
-  type = 'prompt'
+  type      = 'prompt'
   alignment = 'left'
-  newline = true
+  newline   = true
 
   [[blocks.segments]]
-    template = '{{ .Path }} '
+    template   = '{{ .Path }} '
     foreground = 'p:orange'
-    type = 'path'
-    style = 'plain'
+    type       = 'path'
+    style      = 'plain'
 
     [blocks.segments.properties]
-      cache_duration = 'none'
+      cache_duration        = 'none'
       folder_separator_icon = ' 󰁕 '
-      home_icon = ' Home'
-      style = 'full'
+      home_icon             = ' Home'
+      style                 = 'full'
 
   [[blocks.segments]]
-    template = '{{ .UpstreamIcon }}{{ last (splitList "/" .HEAD) }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}'
+    template   = '{{ .UpstreamIcon }}{{ last (splitList "/" .HEAD) }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}'
     foreground = 'p:yellow'
-    type = 'git'
-    style = 'diamond'
+    type       = 'git'
+    style      = 'diamond'
 
     [blocks.segments.properties]
-      branch_icon = ' '
-      cache_duration = 'none'
-      fetch_stash_count = true
-      fetch_status = true
-      fetch_upstream_icon = true
+      branch_icon          = ' '
+      cache_duration       = 'none'
+      fetch_stash_count    = true
+      fetch_status         = true
+      fetch_upstream_icon  = true
       fetch_worktree_count = true
 
 [[blocks]]
-  type = 'prompt'
+  type      = 'prompt'
   alignment = 'right'
 
   [[blocks.segments]]
-    template = '{{ if gt .Code 0 }}  {{ else }}  {{ end }}'
-    type = 'status'
-    style = 'plain'
+    template             = '{{ if gt .Code 0 }}  {{ else }}  {{ end }}'
+    type                 = 'status'
+    style                = 'plain'
     foreground_templates = ['{{ if gt .Code 0 }}p:red{{else}}p:green{{ end }}']
 
     [blocks.segments.properties]
@@ -62,45 +62,45 @@ version = 3
       cache_duration = 'none'
 
   [[blocks.segments]]
-    template = '<p:red></> {{ .Full }} '
+    template   = '<p:red></> {{ .Full }} '
     foreground = 'p:orange'
-    type = 'ruby'
-    style = 'plain'
+    type       = 'ruby'
+    style      = 'plain'
 
     [blocks.segments.properties]
       cache_duration = 'none'
 
   [[blocks.segments]]
-    template = '{{ .FormattedMs }}s'
+    template   = '{{ .FormattedMs }}s'
     foreground = 'p:lightblue'
-    type = 'executiontime'
-    style = 'diamond'
+    type       = 'executiontime'
+    style      = 'diamond'
 
     [blocks.segments.properties]
       cache_duration = 'none'
-      style = 'dallas'
-      threshold = 0.0
+      style          = 'dallas'
+      threshold      = 0.0
 
   [[blocks.segments]]
     template = '  '
-    type = 'root'
-    style = 'diamond'
+    type     = 'root'
+    style    = 'diamond'
 
     [blocks.segments.properties]
       cache_duration = 'none'
-      root_icon = ' '
+      root_icon      = ' '
 
 [[blocks]]
-  type = 'prompt'
+  type      = 'prompt'
   alignment = 'left'
-  newline = true
+  newline   = true
 
   [[blocks.segments]]
-    template = '{{ .UserName }}{{ if .SSHSession }}@{{ .HostName }}{{ end }} <p:purple>></> '
+    template   = '{{ .UserName }}{{ if .SSHSession }}@{{ .HostName }}{{ end }} <p:purple>></> '
     foreground = 'p:blue'
-    type = 'session'
-    style = 'plain'
+    type       = 'session'
+    style      = 'plain'
 
     [blocks.segments.properties]
       cache_duration = 'none'
-      display_host = true
+      display_host   = true
