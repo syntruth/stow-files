@@ -39,6 +39,8 @@ set.splitright = true
 -- dw/diw/ciw works on full-word
 set.iskeyword:append("-")
 
+set.cindent    = true
+
 -- keep cursor at least 8 rows from top/bot
 set.scrolloff  = 8
 

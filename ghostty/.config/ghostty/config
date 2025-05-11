@@ -3,7 +3,7 @@ background             = #000000
 foreground             = #ffffff
 font-size              = 14.5
 background-opacity     = 0.75
-background-blur-radius = 12
+background-blur-radius = 10
 
 mouse-hide-while-typing = true
 
@@ -18,4 +18,5 @@ keybind = super+left=previous_tab
 keybind = super+right=next_tab
 keybind = alt+super+left=move_tab:-1
 keybind = alt+super+right=move_tab:1
-
+keybind = alt+super+up=goto_split:left
+keybind = alt+super+down=goto_split:right
