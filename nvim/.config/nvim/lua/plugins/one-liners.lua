@@ -1,29 +1,35 @@
 return {
-  -- Git plugin
-  {
-    'tpope/vim-fugitive',
-  },
+    -- Git plugin
+    {
+        'tpope/vim-fugitive',
+    },
 
-  -- Show historical versions of the file locally
-  {
-    'mbbill/undotree',
-  },
+    -- Show historical versions of the file locally
+    {
+        'mbbill/undotree',
+    },
 
-  -- Show CSS Colors
-  {
-    'brenoprata10/nvim-highlight-colors',
-    config = function()
-      require('nvim-highlight-colors').setup({})
-    end
-  },
+    -- Show CSS Colors
+    {
+        'brenoprata10/nvim-highlight-colors',
+        config = function()
+            require('nvim-highlight-colors').setup({})
+        end
+    },
 
-  -- Mini Align
-  {
-    'echasnovski/mini.align',
-    version = false,
+    -- Mini Align
+    {
+        'echasnovski/mini.align',
 
-    config = function()
-      require('mini.align').setup()
-    end
-  },
+        version = false,
+
+        config = function()
+            require('mini.align').setup()
+        end
+    },
+
+    -- neotest-rspec
+    {
+        "olimorris/neotest-rspec",
+    },
 }

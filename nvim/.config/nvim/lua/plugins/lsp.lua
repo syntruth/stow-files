@@ -1,8 +1,10 @@
 return {
     'neovim/nvim-lspconfig',
+
     dependencies = {
-        'williamboman/mason.nvim',
+        -- 'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
+
         -- Autocompletion
         'hrsh7th/nvim-cmp',
         'hrsh7th/cmp-buffer',
@@ -10,22 +12,51 @@ return {
         'saadparwaiz1/cmp_luasnip',
         'hrsh7th/cmp-nvim-lsp',
         'hrsh7th/cmp-nvim-lua',
+
         -- Snippets
         'L3MON4D3/LuaSnip',
         'rafamadriz/friendly-snippets',
     },
+
+    opts = {
+        servers = {
+            ruby_lsp = {
+                enabled = lsp == "ruby_lsp",
+            },
+
+            solargraph = {
+                enabled = lsp == "solargraph",
+            },
+
+            rubocop = {
+                -- If Solargraph and Rubocop are both enabled as an LSP,
+                -- diagnostics will be duplicated because Solargraph
+                -- already calls Rubocop if it is installed
+                enabled = formatter == "rubocop" and lsp ~= "solargraph",
+            },
+
+            standardrb = {
+                enabled = formatter == "standardrb",
+            },
+        },
+    },
+
     config = function()
         local autoformat_filetypes = {
             "lua",
+            "ruby"
         }
         -- Create a keymap for vim.lsp.buf.implementation
         vim.api.nvim_create_autocmd('LspAttach', {
             callback = function(args)
                 local client = vim.lsp.get_client_by_id(args.data.client_id)
+
                 if not client then return end
+
                 if vim.tbl_contains(autoformat_filetypes, vim.bo.filetype) then
                     vim.api.nvim_create_autocmd("BufWritePre", {
                         buffer = args.buf,
+
                         callback = function()
                             vim.lsp.buf.format({
                                 formatting_options = { tabSize = 4, insertSpaces = true },
@@ -41,29 +72,32 @@ return {
         -- Add borders to floating windows
         vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
             vim.lsp.handlers.hover,
+
             { border = 'rounded' }
         )
+
         vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
             vim.lsp.handlers.signature_help,
+
             { border = 'rounded' }
         )
 
         -- Configure error/warnings interface
         vim.diagnostic.config({
-            virtual_text = true,
+            virtual_text  = true,
             severity_sort = true,
-            float = {
-                style = 'minimal',
+            float         = {
+                style  = 'minimal',
                 border = 'rounded',
                 header = '',
                 prefix = '',
             },
-            signs = {
+            signs         = {
                 text = {
                     [vim.diagnostic.severity.ERROR] = '✘',
-                    [vim.diagnostic.severity.WARN] = '▲',
-                    [vim.diagnostic.severity.HINT] = '⚑',
-                    [vim.diagnostic.severity.INFO] = '»',
+                    [vim.diagnostic.severity.WARN]  = '▲',
+                    [vim.diagnostic.severity.HINT]  = '⚑',
+                    [vim.diagnostic.severity.INFO]  = '»',
                 },
             },
         })
@@ -71,6 +105,7 @@ return {
         -- Add cmp_nvim_lsp capabilities settings to lspconfig
         -- This should be executed before you configure any language server
         local lspconfig_defaults = require('lspconfig').util.default_config
+
         lspconfig_defaults.capabilities = vim.tbl_deep_extend(
             'force',
             lspconfig_defaults.capabilities,
@@ -97,7 +132,8 @@ return {
             end,
         })
 
-        require('mason').setup({})
+        -- require('mason').setup({})
+
         require('mason-lspconfig').setup({
             ensure_installed = {
                 "lua_ls",

@@ -56,6 +56,11 @@ set.incsearch  = true
 -- faster cursor hold
 set.updatetime = 50
 
+-- LSP Server to use for Ruby.
+-- Set to "solargraph" to use solargraph instead of ruby_lsp.
+-- vim.g.lazyvim_ruby_lsp       = "solargraph"
+-- vim.g.lazyvim_ruby_formatter = "rubocop"
+
 -- Use <space>y to copy lines to the MacOS clipboard.
 vim.keymap.set({ 'v' }, '<C-c>', '"+y')
 vim.keymap.set({ 'v' }, '<C-x>', '"+d')
