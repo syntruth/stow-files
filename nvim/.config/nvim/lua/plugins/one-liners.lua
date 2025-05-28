@@ -6,12 +6,12 @@
 -- * override the configuration of LazyVim plugins
 return {
   -- Show CSS Colors
-  {
-    "brenoprata10/nvim-highlight-colors",
-    config = function()
-      require("nvim-highlight-colors").setup({})
-    end,
-  },
+  --  {
+  --    "brenoprata10/nvim-highlight-colors",
+  --    config = function()
+  --      require("nvim-highlight-colors").setup({})
+  --    end,
+  --  },
 
   -- Mini Align
   {
@@ -56,8 +56,7 @@ return {
     opts = function(_, opts)
       -- add tsx and treesitter
       vim.list_extend(opts.ensure_installed, {
-        "tsx",
-        "typescript",
+        "glimmer",
       })
     end,
   },
