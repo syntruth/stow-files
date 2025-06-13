@@ -5,3 +5,6 @@
 -- Use <space>y to copy lines to the MacOS clipboard.
 vim.keymap.set({ "v" }, "<C-c>", '"+y')
 vim.keymap.set({ "v" }, "<C-x>", '"+d')
+
+-- Use <leader>gb for Git Branch Picker.
+vim.keymap.set({ "n" }, "<leader>gb", Snacks.picker.git_branches)

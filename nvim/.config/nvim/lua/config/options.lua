@@ -3,21 +3,21 @@
 -- Add any additional options here
 
 -- OPTIONS
-local set = vim.opt
+local opt = vim.opt
 
 --line nums
-set.relativenumber = true
-set.number = true
+opt.relativenumber = true
+opt.number = true
 
 -- indentation and tabs
-set.tabstop = 2
-set.shiftwidth = 2
-set.autoindent = true
-set.expandtab = true
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.autoindent = true
+opt.expandtab = true
 
--- 72nd and 80th column
-set.colorcolumn = "72,80"
+-- 80th column
+opt.colorcolumn = "80"
 
 -- split windows
-set.splitbelow = true
-set.splitright = true
+opt.splitbelow = true
+opt.splitright = true
