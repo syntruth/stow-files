@@ -21,3 +21,6 @@ opt.colorcolumn = "80"
 -- split windows
 opt.splitbelow = true
 opt.splitright = true
+
+-- Simple Autocmds
+vim.cmd([[autocmd FileType ruby setlocal indentkeys-=.]])
