@@ -43,4 +43,6 @@ return {
   { "lukas-reineke/virt-column.nvim", opts = {} },
 
   { "brianhuster/treesitter-endwise.nvim" },
+
+  { "rktjmp/shipwright.nvim" },
 }

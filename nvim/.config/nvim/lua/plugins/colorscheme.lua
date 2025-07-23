@@ -1,12 +1,19 @@
 return {
   {
-    -- "carakan/new-railscasts-theme",
-    "lukelex/railscasts.nvim",
+    "syntruth/monalisa-bright-nvim",
+    lazy = false,
+    priority = 1000,
   },
 
   {
     "ptdewey/monalisa-nvim",
+    lazy = false,
+    priority = 1000,
+  },
 
+  {
+    "dgox16/oldworld.nvim",
+    lazy = false,
     priority = 1000,
   },
 
