@@ -24,6 +24,10 @@ oh-my-zsh -> .oh-my-zsh
 
 rubocop -> .rubocop.yml
 
+## Starship
+
+starship -> .config/starship.toml
+
 ## timetrap
 
 timetrap -> .timetrap.db, .timetrap.yaml
