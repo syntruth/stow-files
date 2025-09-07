@@ -70,6 +70,8 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(colorize rbenv)
 
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -94,10 +96,11 @@ export ELIXIR_ERL_OPTIONS="-kernel shell_history enabled"
 # For some reason, compinit is not being called, so we do so manually.
 # compinit
 
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Set up Oh My Posh
-eval "$(oh-my-posh init zsh --config ~/.config/omp-themes/syntruth.omp.toml)"
+# eval "$(oh-my-posh init zsh --config ~/.config/omp-themes/syntruth.omp.toml)"
 
 # Load My Aliases
 test -e "${HOME}/.aliases" && source "${HOME}/.aliases"
@@ -105,3 +108,4 @@ test -e "${HOME}/.aliases" && source "${HOME}/.aliases"
 # Init rbenv
 eval "$(rbenv init - zsh)"
 
+eval "$(starship init zsh)"
