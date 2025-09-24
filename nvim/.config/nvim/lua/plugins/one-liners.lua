@@ -7,9 +7,9 @@
 return {
   -- Mini Align
   {
-    "echasnovski/mini.align",
+    "nvim-mini/mini.align",
 
-    version = false,
+    version = "*",
 
     config = function()
       require("mini.align").setup()
@@ -22,6 +22,7 @@ return {
     opts = {
       ensure_installed = {
         "bash",
+        "glimmer",
         "html",
         "javascript",
         "json",
