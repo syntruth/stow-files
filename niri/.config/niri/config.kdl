@@ -260,6 +260,12 @@ window-rule {
   default-floating-position x=10 y=10 relative-to="bottom-right"
 }
 
+// Set the Steam Friends list to start with a narrow width.
+window-rule {
+  match app-id="steam" title="Friends List";
+  default-column-width { fixed 300; }
+}
+
 window-rule {
   geometry-corner-radius 12
   clip-to-geometry true

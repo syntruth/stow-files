@@ -1,13 +1,13 @@
 {
   "currentThemeName": "dynamic",
   "customThemeFile": "",
-  "matugenScheme": "scheme-expressive",
+  "matugenScheme": "scheme-tonal-spot",
   "runUserMatugenTemplates": true,
   "matugenTargetMonitor": "",
-  "dankBarTransparency": 0.75,
+  "dankBarTransparency": 0.65,
   "dankBarWidgetTransparency": 0,
   "popupTransparency": 1,
-  "dockTransparency": 1,
+  "dockTransparency": 0,
   "use24HourClock": true,
   "showSeconds": false,
   "useFahrenheit": true,
@@ -94,12 +94,8 @@
   "runningAppsGroupByApp": false,
   "clockDateFormat": "",
   "lockDateFormat": "",
-  "mediaSize": 1,
+  "mediaSize": 2,
   "dankBarLeftWidgets": [
-    {
-      "id": "launcherButton",
-      "enabled": true
-    },
     {
       "id": "workspaceSwitcher",
       "enabled": true
@@ -121,6 +117,10 @@
       "enabled": true
     },
     {
+      "id": "systemUpdate",
+      "enabled": true
+    },
+    {
       "id": "systemTray",
       "enabled": true
     },
@@ -129,7 +129,7 @@
       "enabled": true
     },
     {
-      "id": "notificationButton",
+      "id": "clock",
       "enabled": true
     },
     {
@@ -141,7 +141,7 @@
       "enabled": true
     },
     {
-      "id": "clock",
+      "id": "notificationButton",
       "enabled": true
     }
   ],
@@ -183,8 +183,8 @@
   "dockPosition": 1,
   "dockSpacing": 4,
   "dockBottomGap": 0,
-  "dockIconSize": 40,
-  "dockIndicatorStyle": "circle",
+  "dockIconSize": 35,
+  "dockIndicatorStyle": "line",
   "cornerRadius": 12,
   "notificationOverlayEnabled": false,
   "dankBarAutoHide": false,
