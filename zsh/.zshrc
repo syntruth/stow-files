@@ -108,7 +108,11 @@ test -e "${HOME}/.aliases" && source "${HOME}/.aliases"
 # Init rbenv
 eval "$(rbenv init - zsh)"
 
+# Init startship prompt handler
 eval "$(starship init zsh)"
+
+# Init zoxide
+eval "$(zoxide init zsh --cmd cd)"
 
 figlet=`which figlet`
 
