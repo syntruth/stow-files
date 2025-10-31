@@ -12,6 +12,24 @@ return {
   },
 
   {
+    "iagorrr/noctishc.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+
+  {
+    "scottmckendry/cyberdream.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+
+  {
+    "akai54/2077.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+
+  {
     "dgox16/oldworld.nvim",
     lazy = false,
     priority = 1000,

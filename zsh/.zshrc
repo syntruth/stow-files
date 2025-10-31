@@ -70,7 +70,7 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(colorize rbenv)
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,3 +109,15 @@ test -e "${HOME}/.aliases" && source "${HOME}/.aliases"
 eval "$(rbenv init - zsh)"
 
 eval "$(starship init zsh)"
+
+figlet=`which figlet`
+
+if [[ -e $figlet && -x $figlet ]]; then
+  lolcat=`which lolcat`
+
+  if [[ -e $lolcat && -x $lolcat ]]; then
+    echo $HOST | $figlet | $lolcat
+  else
+    echo $HOST | $figlet
+  fi
+fi

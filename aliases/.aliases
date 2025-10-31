@@ -1,10 +1,17 @@
 # My Aliases
+
+## ls => eza
 alias ls='eza -a --group-directories-first --icons'
 alias ll='eza -l -a --group-directories-first --icons --git'
+
+## vim => neovim
+alias vim='nvim'
+
+## Ruby Work
 alias rake='bundle exec rake'
 alias cli='test -f ./bin/cli && ./bin/cli || echo "No cli found."'
 alias console='test -f ./bin/console && ./bin/console || echo "No console found."'
 
+## MongoDB Worl
 alias mongoa="mongosh -u admin -p --authenticationDatabase=admin"
 alias mongoa="mongosh -u admin -p --authenticationDatabase=admin --eval 'rs.status()'"
-alias vim='nvim'
