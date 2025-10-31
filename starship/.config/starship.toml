@@ -12,6 +12,7 @@ $git_status\
 [](fg:yellow bg:green)\
 $c\
 $rust\
+$ruby\
 $golang\
 $nodejs\
 $php\
@@ -20,14 +21,12 @@ $kotlin\
 $haskell\
 $python\
 [](fg:green bg:sapphire)\
-$conda\
-[](fg:sapphire bg:lavender)\
 $time\
-[ ](fg:lavender)\
+[ ](fg:sapphire)\
 $line_break\
 $character"""
 
-palette = 'catppuccin_mocha'
+palette = 'syntruth'
 
 [os]
 disabled = false
@@ -98,6 +97,11 @@ symbol = ""
 style = "bg:green"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
+[ruby]
+symbol = ""
+style = "bg:color_blue"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
 [golang]
 symbol = ""
 style = "bg:green"
@@ -134,6 +138,7 @@ style = "bg:sapphire"
 format = '[[ $symbol( $context) ](fg:crust bg:sapphire)]($style)'
 
 [conda]
+disabled = true
 symbol = "  "
 style = "fg:crust bg:sapphire"
 format = '[$symbol$environment ]($style)'
@@ -142,8 +147,8 @@ ignore_base = false
 [time]
 disabled = false
 time_format = "%R"
-style = "bg:lavender"
-format = '[[  $time ](fg:crust bg:lavender)]($style)'
+style = "bg:sapphire"
+format = '[[  $time ](fg:crust bg:sapphire)]($style)'
 
 [line_break]
 disabled = false
@@ -162,8 +167,37 @@ show_milliseconds = true
 format = " in $duration "
 style = "bg:lavender"
 disabled = false
-show_notifications = true
+# show_notifications = true
 min_time_to_notify = 45000
+
+[palettes.syntruth]
+white = "#ffffff"
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#c43a29"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
