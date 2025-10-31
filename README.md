@@ -4,9 +4,25 @@
 
 btop -> .config/btop/btop.conf
 
+## dankmaterialshell
+
+dankmaterialshell -> .config/DankMaterialShell/settings.json
+
+## ghostty
+
+ghostty -> .config/ghostty/config, .config/ghostty/themes/
+
 ## git
 
 git -> .gitconfig
+
+## kitty
+
+kitty -> .config/kitty/kitty.conf
+
+## niri
+
+niri -> .config/niri/config.kdl, .config/niri/dms/*.kdl
 
 ## nvim
 
