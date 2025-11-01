@@ -4,7 +4,7 @@
   "matugenScheme": "scheme-expressive",
   "runUserMatugenTemplates": true,
   "matugenTargetMonitor": "",
-  "dankBarTransparency": 0,
+  "dankBarTransparency": 0.35,
   "dankBarWidgetTransparency": 0,
   "popupTransparency": 1,
   "dockTransparency": 0,
