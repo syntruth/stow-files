@@ -1,10 +1,10 @@
 {
-  "currentThemeName": "dynamic",
-  "customThemeFile": "",
+  "currentThemeName": "amber",
+  "customThemeFile": "/home/syntruth/.config/DankMaterialShell/themes/synthwave-electric.json",
   "matugenScheme": "scheme-expressive",
   "runUserMatugenTemplates": true,
   "matugenTargetMonitor": "",
-  "dankBarTransparency": 0.35,
+  "dankBarTransparency": 0,
   "dankBarWidgetTransparency": 0,
   "popupTransparency": 1,
   "dockTransparency": 0,
@@ -122,6 +122,10 @@
       "enabled": true
     },
     {
+      "id": "colorPicker",
+      "enabled": true
+    },
+    {
       "id": "systemUpdate",
       "enabled": true
     },
@@ -167,7 +171,7 @@
   "monoFontFamily": "Hack Nerd Font",
   "fontWeight": 800,
   "fontScale": 1,
-  "dankBarFontScale": 1,
+  "dankBarFontScale": 1.2000000000000002,
   "notepadUseMonospace": true,
   "notepadFontFamily": "",
   "notepadFontSize": 14,
