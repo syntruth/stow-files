@@ -148,22 +148,23 @@ layout {
         // The settings are the same as for the focus ring.
         // on
 
-        width 3
-        // active-color "#d65d0e"
-        // inactive-color "#d79921"
+        width 2
+        // active-color "#f9e2af"
+        // inactive-color "#b0c6ff"
         urgent-color "#9b0000"
 
-        active-gradient from="#e3814c" to="#1a1006" // angle=155
+        // active-gradient from="#e3814c" to="#1a1006" // angle=155
+        active-gradient from="#f9e2af" to="#9c8d6e" // angle=155
         inactive-gradient from="#b0c6ff" to="#1a1006" // angle=155
     }
 
     shadow {
         // Uncomment the next line to enable shadows.
-        on
-        softness 30
-        spread 5
-        offset x=0 y=5
-        color "#0007"
+        // on
+        // softness 20
+        // spread 5
+        // offset x=0 y=5
+        // color "#1a1006ee"
     }
 }
 
@@ -359,7 +360,7 @@ binds {
     }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Return hotkey-overlay-title="Open a Terminal: Ghostty" { spawn "ghostty"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: Kitty" { spawn "kitty"; }
     Mod+B hotkey-overlay-title="Firefox" { spawn "firefox"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
