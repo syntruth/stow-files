@@ -1,10 +1,10 @@
 {
-  "currentThemeName": "dynamic",
-  "customThemeFile": "",
-  "matugenScheme": "scheme-tonal-spot",
+  "currentThemeName": "amber",
+  "customThemeFile": "/home/syntruth/.config/DankMaterialShell/themes/synthwave-electric.json",
+  "matugenScheme": "scheme-expressive",
   "runUserMatugenTemplates": true,
   "matugenTargetMonitor": "",
-  "dankBarTransparency": 0.65,
+  "dankBarTransparency": 0.35,
   "dankBarWidgetTransparency": 0,
   "popupTransparency": 1,
   "dockTransparency": 0,
@@ -84,6 +84,7 @@
   "showWorkspaceApps": false,
   "maxWorkspaceIcons": 5,
   "workspacesPerMonitor": true,
+  "dwlShowAllTags": false,
   "workspaceNameIcons": {},
   "waveProgressEnabled": true,
   "clockCompactMode": false,
@@ -99,11 +100,15 @@
     {
       "id": "workspaceSwitcher",
       "enabled": true
+    },
+    {
+      "id": "focusedWindow",
+      "enabled": true
     }
   ],
   "dankBarCenterWidgets": [
     {
-      "id": "focusedWindow",
+      "id": "clock",
       "enabled": true
     }
   ],
@@ -114,6 +119,10 @@
     },
     {
       "id": "weather",
+      "enabled": true
+    },
+    {
+      "id": "colorPicker",
       "enabled": true
     },
     {
@@ -146,9 +155,10 @@
     }
   ],
   "appLauncherViewMode": "list",
-  "spotlightModalViewMode": "list",
+  "spotlightModalViewMode": "grid",
   "sortAppsAlphabetically": false,
   "networkPreference": "auto",
+  "vpnLastConnected": "",
   "iconTheme": "Gruvbox-Plus-Dark",
   "launcherLogoMode": "apps",
   "launcherLogoCustomPath": "",
@@ -161,7 +171,7 @@
   "monoFontFamily": "Hack Nerd Font",
   "fontWeight": 800,
   "fontScale": 1,
-  "dankBarFontScale": 1,
+  "dankBarFontScale": 1.2000000000000002,
   "notepadUseMonospace": true,
   "notepadFontFamily": "",
   "notepadFontSize": 14,
@@ -198,8 +208,8 @@
   "dankBarGothCornersEnabled": false,
   "dankBarBorderEnabled": true,
   "dankBarBorderColor": "primary",
-  "dankBarBorderOpacity": 0.5,
-  "dankBarBorderThickness": 1,
+  "dankBarBorderOpacity": 1,
+  "dankBarBorderThickness": 2,
   "popupGapsAuto": true,
   "popupGapsManual": 4,
   "dankBarPosition": 0,
