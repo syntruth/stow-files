@@ -2,12 +2,10 @@ theme                  = moonfly
 background             = #000000
 foreground             = #ffffff
 font-size              = 14
-background-opacity     = 0.65
+background-opacity     = 0.75
 background-blur-radius = 5
 
 mouse-hide-while-typing = true
-
-macos-titlebar-style = tabs
 
 quit-after-last-window-closed = true
 
