@@ -328,7 +328,7 @@ binds {
       spawn "dms" "ipc" "call" "notepad" "toggle";
     }
 
-    Super+Alt+L hotkey-overlay-title="Lock Screen" {
+    Super+L hotkey-overlay-title="Lock Screen" {
       spawn "dms" "ipc" "call" "lock" "lock";
     }
 
