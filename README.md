@@ -10,7 +10,7 @@ dankmaterialshell -> .config/DankMaterialShell/settings.json
 
 ## ghostty
 
-ghostty -> .config/ghostty/config, .config/ghostty/themes/
+ghostty -> .config/ghostty/*
 
 ## git
 
@@ -26,11 +26,11 @@ niri -> .config/niri/config.kdl, .config/niri/dms/*.kdl
 
 ## nvim
 
-nvim -> .config/nvim/
+nvim -> .config/nvim/*
 
 ## oh-my-posh
 
-omp -> .config/omp-themes/
+omp -> .config/omp-themes/*
 
 ## oh-my-zsh
 
@@ -51,6 +51,10 @@ timetrap -> .timetrap.db, .timetrap.yaml
 ## wezterm
 
 wezterm -> .config/wezterm/wezterm.lua
+
+## yazi
+
+yazi -> .config/yazi/*
 
 ## zsh
 
