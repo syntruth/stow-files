@@ -1,5 +1,7 @@
 # Add deno completions to search path
-if [[ ":$FPATH:" != *":/Users/rcarnahan/.zsh/completions:"* ]]; then export FPATH="/Users/rcarnahan/.zsh/completions:$FPATH"; fi
+if [[ ":$FPATH:" != *":/Users/rcarnahan/.zsh/completions:"* ]]; then
+  export FPATH="/Users/rcarnahan/.zsh/completions:$FPATH";
+fi
 
 # Set up colors
 export TERM="xterm-256color"
@@ -93,14 +95,13 @@ export ELIXIR_ERL_OPTIONS="-kernel shell_history enabled"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# For some reason, compinit is not being called, so we do so manually.
-# compinit
-
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-# Set up Oh My Posh
-# eval "$(oh-my-posh init zsh --config ~/.config/omp-themes/syntruth.omp.toml)"
+# For some reason, compinit is not being called, so we do so manually and setup
+# autocomplete pluging.
+autoload -U compinit && compinit
+# source $HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+# zstyle ':autocomplete:*' add-semicolon no
+# zstyle ':autocomplete:*' min-input 3
+# zstyle ':autocomplete:history-incremental-search-backward:*' list-lines 8
 
 # Load My Aliases
 test -e "${HOME}/.aliases" && source "${HOME}/.aliases"
@@ -108,20 +109,15 @@ test -e "${HOME}/.aliases" && source "${HOME}/.aliases"
 # Init rbenv
 eval "$(rbenv init - zsh)"
 
-# Init startship prompt handler
-eval "$(starship init zsh)"
-
 # Init zoxide
 eval "$(zoxide init zsh --cmd cd)"
 
-figlet=`which figlet`
+# Init startship prompt handler
+eval "$(starship init zsh)"
 
-if [[ -e $figlet && -x $figlet ]]; then
-  lolcat=`which lolcat`
+lolcat=`which lolcat`
 
-  if [[ -e $lolcat && -x $lolcat ]]; then
-    echo $HOST | $figlet | $lolcat
-  else
-    echo $HOST | $figlet
-  fi
+if [[ -e $lolcat && -x $lolcat ]]; then
+  echo $HOST | $lolcat -p 0.75 -F 0.2
 fi
+

@@ -2,8 +2,8 @@ theme                  = moonfly
 background             = #000000
 foreground             = #ffffff
 font-size              = 14
-background-opacity     = 0.75
-background-blur-radius = 5
+background-opacity     = 0.8
+background-blur-radius = 10
 
 mouse-hide-while-typing = true
 

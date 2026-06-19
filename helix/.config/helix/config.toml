@@ -2,7 +2,7 @@ theme = 'mine'
 
 [editor]
 line-number = "relative"
-rulers=[80, 100]
+rulers = [80, 100]
 
 [editor.cursor-shape]
 insert = 'block'
