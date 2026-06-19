@@ -1,5 +1,6 @@
 AllCops:
-  TargetRubyVersion: 2.7.1
+  NewCops: enable
+  TargetRubyVersion: 3.3.5
 
 Layout/HashAlignment:
   EnforcedHashRocketStyle: table
@@ -65,6 +66,12 @@ Metrics/ModuleLength:
     - hash
   CountComments: false
   Max: 150
+
+Naming/PredicateMethod:
+  AllowedMethods:
+    - call
+    - perform
+  AllowBangMethods: true
 
 Naming/RescuedExceptionsVariableName:
   PreferredName: err
